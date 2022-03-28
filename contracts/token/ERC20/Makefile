@@ -2,11 +2,11 @@ all: dockerimg run togofile
 	@echo all
 
 dockerimg:
-	docker build -t eip200.8.0:v1 .
+	cd ../../../ && docker build -t eip200.8.0:v1 -f ./contracts/token/ERC20/Dockerfile .
 	@echo dockerimg
 
 run:
-	docker run -v /home/usera/projects/sol/openzeppelin-contracts/contracts/token/ERC20/outputeip20:/source/contracts/token/ERC20/outputeip20 eip200.8.0:v1 -o /sources/contracts/token/ERC20/outputeip20 --abi --overwrite --bin ERC20.sol
+	docker run -v /home/usera/projects/sol/openzeppelin-contracts/contracts/token/ERC20/outputeip20:/outputeip20 eip200.8.0:v1 --allow-paths /source -o /outputeip20 --abi --overwrite --bin /source/contracts/token/ERC20/ERC20.sol
 	@echo dockerrun
 
 togofile:

@@ -10,6 +10,6 @@ run:
 	@echo dockerrun
 
 togofile:
-	abigen --abi=./outputeip721/ERC721.abi --bin=./outputeip721/ERC721.bin --pkg=eiptwostore --out=./eip721.go
+	abigen --abi=./outputeip721/ERC721.abi --bin=./outputeip721/ERC721.bin --pkg=eipnft --out=./eip721.go
 
 

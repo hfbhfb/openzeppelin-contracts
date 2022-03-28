@@ -6,7 +6,7 @@ dockerimg:
 	@echo dockerimg
 
 run:
-	docker run -v /home/usera/projects/sol/openzeppelin-contracts:/sources eip200.8.0:v1 -o /sources/contracts/token/ERC20/outputeip20 --abi --overwrite --bin ERC20.sol
+	docker run -v /home/usera/projects/sol/openzeppelin-contracts/contracts/token/ERC20/outputeip20:/source/contracts/token/ERC20/outputeip20 eip200.8.0:v1 -o /sources/contracts/token/ERC20/outputeip20 --abi --overwrite --bin ERC20.sol
 	@echo dockerrun
 
 togofile:

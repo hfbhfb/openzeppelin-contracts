@@ -1,8 +1,6 @@
 SOLFILE=SimpleNFTWithPaymentAndAuction.sol
 #SOLFILE=ERC721.sol
 
-aaa:
-	@echo ${SOLFILE}
 
 all: dockerimg run togofile
 	@echo all

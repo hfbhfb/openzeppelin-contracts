@@ -1,3 +1,14 @@
+
+  * 本地路径 
+    * cd /Users/hfb/projects/solidity/openzeppelin-contracts
+      * 需要在赣州服务器make
+  * 赣州路径
+    * cd /home/usera/projects/sol/openzeppelin-contracts
+    * 编译 erc20
+      * /home/usera/projects/sol/openzeppelin-contracts/contracts/token/ERC20
+        * docker run -v /home/usera/projects/sol/openzeppelin-contracts:/sources eip200.8.0:v1 -o /sources/output --abi --bin ERC20.sol
+
+
 # <img src="logo.svg" alt="OpenZeppelin" height="40px">
 
 [![Docs](https://img.shields.io/badge/docs-%F0%9F%93%84-blue)](https://docs.openzeppelin.com/contracts)

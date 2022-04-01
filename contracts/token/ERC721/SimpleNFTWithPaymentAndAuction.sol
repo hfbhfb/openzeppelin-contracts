@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 //required to return a Struct object
 pragma abicoder v2;
 
-import "./extensions/ERC721URIStorage.sol";
+import "./extensions/ERC721EnumerableAndURIStorage.sol";
 
 interface IERC20 {
     function transferFrom(
@@ -14,7 +14,7 @@ interface IERC20 {
     ) external returns (bool);
 }
 
-contract SimpleNFTWithPaymentAndAuction is ERC721URIStorage {
+contract SimpleNFTWithPaymentAndAuction is ERC721EnumerableAndURIStorage {
     //simple method for creating unique identifiers for NFTs which also acts to track the total number of NFTs created as well
     uint256 public counter;
 
